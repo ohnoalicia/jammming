@@ -6,15 +6,23 @@ class TrackList extends React.Component {
   render() {
     return (
       <div className="TrackList">
-        {this.props.tracks[0].name} 
-        {/* <button className="Playlist-save">SAVE TO SPOTIFY</button>
         {this.props.tracks.map((track) => {
-          return <Track track={track} key={track.id} />;
-        })} */}
+          return (
+            <Track
+              track={track}
+              key={track.id}
+              onAdd={this.props.onAdd}
+              onRemove={this.props.onRemove}
+              isRemoval={this.props.isRemoval}
+            />
+          );
+        })}
       </div>
     );
   }
 }
 export default TrackList;
 
-//not displaying - issue somewhere in step 32
+// can console log in render
+// debugger is like a breakpoint
+// timeout when loading in devtools
