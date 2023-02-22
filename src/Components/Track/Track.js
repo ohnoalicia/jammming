@@ -5,13 +5,13 @@ class Track extends React.Component {
   constructor(props) {
     super(props);
 
+    this.renderAction = this.renderAction.bind(this);
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
   }
 
   renderAction() {
     if (this.props.isRemoval) {
-        
       return <button className="Track-action" onClick={this.removeTrack}>-</button>;
     } else {
       return <button className="Track-action" onClick={this.addTrack}>+</button>;
@@ -35,6 +35,7 @@ class Track extends React.Component {
             {this.props.track.artist} | {this.props.track.album}
           </p>
         </div>
+        {this.renderAction()}
       </div>
     );
   }
@@ -43,3 +44,4 @@ class Track extends React.Component {
 export default Track;
 
 //where are my buttons????
+//can add track onClick but not removeTrack

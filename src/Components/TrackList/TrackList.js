@@ -25,4 +25,3 @@ export default TrackList;
 
 // can console log in render
 // debugger is like a breakpoint
-// timeout when loading in devtools
